@@ -1,32 +1,31 @@
-class B extends Thread
+class A extends Thread
 {
-
+int i =1;
 public void run()
 {
-for (int j=0;j<=5;j++)
+while(i<=10)
 {
-System.out.println("Threa B =" + j);
+
+System.out.println("i = "+i);
+try
+{
+Thread.sleep(1000);
 }
-System.out.println("End of Threa B");
+catch(Exception e)
+{
+}
+i++;
+}
 }
 }
 
 
-class SetPriority
+
+class SleepDemo
 {
 public static void main(String args[])
 {
 A a = new A();
-B b = new B();
-
-a.setPriority(Thread.MAX_PRIORITY);
-b.setPriority(Thread.MIN_PRIORITY);
-
 a.start();
-b.start();
-
-
-System.out.println(" Main Thread--Hello");
-
 }
 }
