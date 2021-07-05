@@ -16,12 +16,12 @@ INSERT INTO bus VALUES('TS489', 'Hyderabad', 'blue');
 SELECT * FROM bus;
 
 CREATE TABLE ticket(ticket_num int, from_place VARCHAR(20), destiny VARCHAR(20),bid int);
-INSERT INTO ticket VALUES(1,'hyd','karimnagar',1);
+INSERT INTO ticket VALUES(1,'hyd','khammam',1);
 INSERT INTO ticket VALUES(2,'hyd','Nizamabad',3);
-INSERT INTO ticket VALUES(3,'hyd','vijayawada',2);
+INSERT INTO ticket VALUES(3,'Warangal','vijayawada',2);
 select * FROM ticket;
 
-DELETE FROM ticket T WHERE T.from_place='medchal'; 
+DELETE FROM ticket T WHERE T.from_place='Warangal'; 
 UPDATE ticket T SET T.ticket_num= ticket_num+1 WHERE T.ticket_num=1;
 ALTER TABLE ticket ADD COLUMN pid INT;
 SELECT * FROM ticket;
