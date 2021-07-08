@@ -32,7 +32,7 @@ SELECT p.name FROM passenger p WHERE p.gender = "F" ;
 
 SELECT t.ticket_num, p.name FROM passenger p, ticket t WHERE t.pid = p.pid ;
 
-SELECT t.ticket_num, p.name FROM ticket t, passenger p WHERE p.name LIKE "M % a" AND t.pid=p.pid ;
+SELECT t.ticket_num, p.name FROM ticket t, passenger p WHERE p.name LIKE "M % h" AND t.pid=p.pid ;
 
 SELECT p.name,p.age FROM passenger p WHERE 15<=p.age AND p.age<=25;
 
